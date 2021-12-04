@@ -2,7 +2,7 @@ package com.example.demo.controller;
 
 import java.util.Optional;
 
-import javax.servlet.http.HttpServletRequest;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,10 +45,10 @@ public class MyClass {
 	}
 	
 	@GetMapping("/home")
-	String home(HttpSession session, HttpServletRequest request) {
-		if(session.getAttribute("id")==null) {
-			return "redirect:/";
-		}
+	String home(HttpSession session) {
+//		if(session.getAttribute("id")==null) {
+//			return "redirect:/";
+//		}
 		return "home";
 	}
 	
