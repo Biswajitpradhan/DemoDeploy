@@ -44,11 +44,11 @@ public class MyClass {
 		return "redirect:/";
 	}
 	
-	@GetMapping("/home")
+	@RequestMapping("/homepage")
 	String home(HttpSession session) {
-//		if(session.getAttribute("id")==null) {
-//			return "redirect:/";
-//		}
+		if(session.getAttribute("id")==null) {
+			return "redirect:/";
+		}
 		return "home";
 	}
 	
@@ -63,6 +63,14 @@ public class MyClass {
 			return "redirect:home";
 		}
 		return "redirect:/";
+	}
+	
+	@GetMapping("/customizeProduct")
+	String Customize(HttpSession session) {
+		if(session.getAttribute("id")==null) {
+			return "redirect:/";
+		}
+		return "customize";
 	}
 	
 	
