@@ -49,7 +49,7 @@ public class MyClass {
 //		if(session.getAttribute("id")==null) {
 //			return "redirect:/";
 //		}
-		return "home";
+		return "check";
 	}
 	
 	@PostMapping("/login")
