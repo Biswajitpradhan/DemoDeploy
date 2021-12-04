@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" th:href="@{./css/customize.css}">
+   <script th:src="@{./js/customize.js}"></script>
+    <title>Customize</title>
+</head>
+
+<body onload="getValues()">
+    <div id="sideNav">
+        <nav>
+            <ul>
+                <li><a th:href="home">HOME</a></li>
+                <li><a th:href="customize">CUSTOMIZE</a></li>
+                <li><a href="spare.html">SPARE PARTS</a></li>
+                <li><a href="aboutus.html">ABOUT US</a></li>
+                <li><a href="contact.html">MEET US</a></li>
+                <li><a href="signin.html">LOG IN</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="menuBtn">
+        <img src="img/menu.png" id="menu">
+    </div>
+
+    <form action="#">
+        <section id="feature">
+            <div class="title-text">
+                <p>Customize</p>
+                <h1>READY, SET, BUILD!</h1>
+            </div>
+            <div class="row" id="shw">
+                <div class="col">
+                    <div class="features-img ">
+                        <div class="single-service">
+                            <img src="./img/computer2.jpg">
+                            <div class="overlay"></div>
+                            <div class="service-desc">
+                                <h3>Customize</h3>
+                                <hr>
+                                <p>This is all about how you customize your own CPU</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" id="details">
+                    <div class="row" >
+                        <button id="btn1" onclick="showDetails1()">Cooler</button>
+                        <button id="btn2" onclick="showDetails2()">X73 360mm Liquid Cooler</button>
+                        
+                        <div id="showDetails1">
+                            <label>Type</label> <br>
+                            <div onclick="change1()" id="coolerType">
+                                X73 360mm Liquid Cooler
+                            </div>
+                           
+                        </div>
+                       
+                    </div>
+                    
+                    <div class="row">
+                        <button id="btn1" onclick="showDetails1()">PSU</button>
+                        <button id="btn2" onclick="showDetails2()">X73 360mm Liquid Cooler</button>
+                        <button id="btn3" onclick="showDetails3()">X53 RGB 240mm Liquid Cooler</button>
+                        <button id="btn4" onclick="showDetails4()">X63 RGB 280mm Liquid Cooler</button>
+                        <button id="btn5" onclick="showDetails5()">X73 RGB 360mm Liquid Cooler</button>
+                        <button id="btn6" onclick="showDetails6()">Z53 240mm Liquid Cooler</button>
+                        <button id="btn7" onclick="showDetails7()">Z63 28mm Liquid Cooler</button>
+                        <div id="showDetails2">
+                            <label>Type</label> <br>
+                            <div onclick="change1()">
+                                X73 360mm Liquid Cooler
+                            </div>
+                            <div onclick="change2()" >
+                                X53 RGB 240mm Liquid Cooler
+                            </div>
+                            <div onclick="change3()" >
+                                X63 RGB 280mm Liquid Cooler
+                            </div>
+                            <div onclick="change4()" >
+                                X73 RGB 360mm Liquid Cooler
+                            </div>
+                            <div onclick="change5()" >
+                                Z53 240mm Liquid Cooler
+                            </div>
+                            <div onclick="change6()" >
+                                Z63 28mm Liquid Cooler
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="row">
+                        <button id="btn1" onclick="showDetails1()">Processor</button>
+                        <button id="btn2" onclick="showDetails2()">X73 360mm Liquid Cooler</button>
+                        <button id="btn3" onclick="showDetails3()">X53 RGB 240mm Liquid Cooler</button>
+                        <button id="btn4" onclick="showDetails4()">X63 RGB 280mm Liquid Cooler</button>
+                        <button id="btn5" onclick="showDetails5()">X73 RGB 360mm Liquid Cooler</button>
+                        <button id="btn6" onclick="showDetails6()">Z53 240mm Liquid Cooler</button>
+                        <button id="btn7" onclick="showDetails7()">Z63 28mm Liquid Cooler</button>
+                        <div id="showDetails3">
+                            <label>Type</label> <br>
+                            <div onclick="change1()">
+                                X73 360mm Liquid Cooler
+                            </div>
+                            <div onclick="change2()" >
+                                X53 RGB 240mm Liquid Cooler
+                            </div>
+                            <div onclick="change3()" >
+                                X63 RGB 280mm Liquid Cooler
+                            </div>
+                            <div onclick="change4()" >
+                                X73 RGB 360mm Liquid Cooler
+                            </div>
+                            <div onclick="change5()" >
+                                Z53 240mm Liquid Cooler
+                            </div>
+                            <div onclick="change6()" >
+                                Z63 28mm Liquid Cooler
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="row">
+                        <button id="btn1" onclick="showDetails1()">MotherBoard</button>
+                        <button id="btn2" onclick="showDetails2()">X73 360mm Liquid Cooler</button>
+                        <button id="btn3" onclick="showDetails3()">X53 RGB 240mm Liquid Cooler</button>
+                        <button id="btn4" onclick="showDetails4()">X63 RGB 280mm Liquid Cooler</button>
+                        <button id="btn5" onclick="showDetails5()">X73 RGB 360mm Liquid Cooler</button>
+                        <button id="btn6" onclick="showDetails6()">Z53 240mm Liquid Cooler</button>
+                        <button id="btn7" onclick="showDetails7()">Z63 28mm Liquid Cooler</button>
+                        <div id="showDetails4">
+                            <label>Type</label> <br>
+                            <div onclick="change1()">
+                                X73 360mm Liquid Cooler
+                            </div>
+                            <div onclick="change2()" >
+                                X53 RGB 240mm Liquid Cooler
+                            </div>
+                            <div onclick="change3()" >
+                                X63 RGB 280mm Liquid Cooler
+                            </div>
+                            <div onclick="change4()" >
+                                X73 RGB 360mm Liquid Cooler
+                            </div>
+                            <div onclick="change5()" >
+                                Z53 240mm Liquid Cooler
+                            </div>
+                            <div onclick="change6()" >
+                                Z63 28mm Liquid Cooler
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="row">
+                        <button id="btn1" onclick="showDetails1()">RAM</button>
+                        <button id="btn2" onclick="showDetails2()">X73 360mm Liquid Cooler</button>
+                        <button id="btn3" onclick="showDetails3()">X53 RGB 240mm Liquid Cooler</button>
+                        <button id="btn4" onclick="showDetails4()">X63 RGB 280mm Liquid Cooler</button>
+                        <button id="btn5" onclick="showDetails5()">X73 RGB 360mm Liquid Cooler</button>
+                        <button id="btn6" onclick="showDetails6()">Z53 240mm Liquid Cooler</button>
+                        <button id="btn7" onclick="showDetails7()">Z63 28mm Liquid Cooler</button>
+                        <div id="showDetails5">
+                            <label>Type</label> <br>
+                            <div onclick="change1()">
+                                X73 360mm Liquid Cooler
+                            </div>
+                            <div onclick="change2()" >
+                                X53 RGB 240mm Liquid Cooler
+                            </div>
+                            <div onclick="change3()" >
+                                X63 RGB 280mm Liquid Cooler
+                            </div>
+                            <div onclick="change4()" >
+                                X73 RGB 360mm Liquid Cooler
+                            </div>
+                            <div onclick="change5()" >
+                                Z53 240mm Liquid Cooler
+                            </div>
+                            <div onclick="change6()" >
+                                Z63 28mm Liquid Cooler
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="row">
+                        <button id="btn1" onclick="showDetails1()">Graphics Card</button>
+                        <button id="btn2" onclick="showDetails2()">X73 360mm Liquid Cooler</button>
+                        <button id="btn3" onclick="showDetails3()">X53 RGB 240mm Liquid Cooler</button>
+                        <button id="btn4" onclick="showDetails4()">X63 RGB 280mm Liquid Cooler</button>
+                        <button id="btn5" onclick="showDetails5()">X73 RGB 360mm Liquid Cooler</button>
+                        <button id="btn6" onclick="showDetails6()">Z53 240mm Liquid Cooler</button>
+                        <button id="btn7" onclick="showDetails7()">Z63 28mm Liquid Cooler</button>
+                        <div id="showDetails6">
+                            <label>Type</label> <br>
+                            <div onclick="change1()">
+                                X73 360mm Liquid Cooler
+                            </div>
+                            <div onclick="change2()" >
+                                X53 RGB 240mm Liquid Cooler
+                            </div>
+                            <div onclick="change3()" >
+                                X63 RGB 280mm Liquid Cooler
+                            </div>
+                            <div onclick="change4()" >
+                                X73 RGB 360mm Liquid Cooler
+                            </div>
+                            <div onclick="change5()" >
+                                Z53 240mm Liquid Cooler
+                            </div>
+                            <div onclick="change6()" >
+                                Z63 28mm Liquid Cooler
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="row">
+                        <button id="btn1" onclick="showDetails1()">Primary Storage</button>
+                        <button id="btn2" onclick="showDetails2()">X73 360mm Liquid Cooler</button>
+                        <button id="btn3" onclick="showDetails3()">X53 RGB 240mm Liquid Cooler</button>
+                        <button id="btn4" onclick="showDetails4()">X63 RGB 280mm Liquid Cooler</button>
+                        <button id="btn5" onclick="showDetails5()">X73 RGB 360mm Liquid Cooler</button>
+                        <button id="btn6" onclick="showDetails6()">Z53 240mm Liquid Cooler</button>
+                        <button id="btn7" onclick="showDetails7()">Z63 28mm Liquid Cooler</button>
+                        <div id="showDetails7">
+                            <label>Type</label> <br>
+                            <div onclick="change1()">
+                                X73 360mm Liquid Cooler
+                            </div>
+                            <div onclick="change2()" >
+                                X53 RGB 240mm Liquid Cooler
+                            </div>
+                            <div onclick="change3()" >
+                                X63 RGB 280mm Liquid Cooler
+                            </div>
+                            <div onclick="change4()" >
+                                X73 RGB 360mm Liquid Cooler
+                            </div>
+                            <div onclick="change5()" >
+                                Z53 240mm Liquid Cooler
+                            </div>
+                            <div onclick="change6()" >
+                                Z63 28mm Liquid Cooler
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="row">
+                        <button id="btn1" onclick="showDetails1()">Secondary Storage</button>
+                        <button id="btn2" onclick="showDetails2()">X73 360mm Liquid Cooler</button>
+                        <button id="btn3" onclick="showDetails3()">X53 RGB 240mm Liquid Cooler</button>
+                        <button id="btn4" onclick="showDetails4()">X63 RGB 280mm Liquid Cooler</button>
+                        <button id="btn5" onclick="showDetails5()">X73 RGB 360mm Liquid Cooler</button>
+                        <button id="btn6" onclick="showDetails6()">Z53 240mm Liquid Cooler</button>
+                        <button id="btn7" onclick="showDetails7()">Z63 28mm Liquid Cooler</button>
+                        <div id="showDetails1">
+                            <label>Type</label> <br>
+                            <div onclick="change1()">
+                                X73 360mm Liquid Cooler
+                            </div>
+                            <div onclick="change2()" >
+                                X53 RGB 240mm Liquid Cooler
+                            </div>
+                            <div onclick="change3()" >
+                                X63 RGB 280mm Liquid Cooler
+                            </div>
+                            <div onclick="change4()" >
+                                X73 RGB 360mm Liquid Cooler
+                            </div>
+                            <div onclick="change5()" >
+                                Z53 240mm Liquid Cooler
+                            </div>
+                            <div onclick="change6()" >
+                                Z63 28mm Liquid Cooler
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="row">
+                        <button id="btn1" onclick="showDetails1()">Case</button>
+                        <button id="btn2" onclick="showDetails2()">X73 360mm Liquid Cooler</button>
+                        <button id="btn3" onclick="showDetails3()">X53 RGB 240mm Liquid Cooler</button>
+                        <button id="btn4" onclick="showDetails4()">X63 RGB 280mm Liquid Cooler</button>
+                        <button id="btn5" onclick="showDetails5()">X73 RGB 360mm Liquid Cooler</button>
+                        <button id="btn6" onclick="showDetails6()">Z53 240mm Liquid Cooler</button>
+                        <button id="btn7" onclick="showDetails7()">Z63 28mm Liquid Cooler</button>
+                        <div id="showDetails1">
+                            <label>Type</label> <br>
+                            <div onclick="change1()">
+                                X73 360mm Liquid Cooler
+                            </div>
+                            <div onclick="change2()" >
+                                X53 RGB 240mm Liquid Cooler
+                            </div>
+                            <div onclick="change3()" >
+                                X63 RGB 280mm Liquid Cooler
+                            </div>
+                            <div onclick="change4()" >
+                                X73 RGB 360mm Liquid Cooler
+                            </div>
+                            <div onclick="change5()" >
+                                Z53 240mm Liquid Cooler
+                            </div>
+                            <div onclick="change6()" >
+                                Z63 28mm Liquid Cooler
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="row">
+                        <button id="btn1" onclick="showDetails1()">Monitor</button>
+                        <button id="btn2" onclick="showDetails2()">X73 360mm Liquid Cooler</button>
+                        <button id="btn3" onclick="showDetails3()">X53 RGB 240mm Liquid Cooler</button>
+                        <button id="btn4" onclick="showDetails4()">X63 RGB 280mm Liquid Cooler</button>
+                        <button id="btn5" onclick="showDetails5()">X73 RGB 360mm Liquid Cooler</button>
+                        <button id="btn6" onclick="showDetails6()">Z53 240mm Liquid Cooler</button>
+                        <button id="btn7" onclick="showDetails7()">Z63 28mm Liquid Cooler</button>
+                        <div id="showDetails1">
+                            <label>Type</label> <br>
+                            <div onclick="change1()">
+                                X73 360mm Liquid Cooler
+                            </div>
+                            <div onclick="change2()" >
+                                X53 RGB 240mm Liquid Cooler
+                            </div>
+                            <div onclick="change3()" >
+                                X63 RGB 280mm Liquid Cooler
+                            </div>
+                            <div onclick="change4()" >
+                                X73 RGB 360mm Liquid Cooler
+                            </div>
+                            <div onclick="change5()" >
+                                Z53 240mm Liquid Cooler
+                            </div>
+                            <div onclick="change6()" >
+                                Z63 28mm Liquid Cooler
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="row">
+                        <button id="btn1" onclick="showDetails1()">OS</button>
+                        <button id="btn2" onclick="showDetails2()">X73 360mm Liquid Cooler</button>
+                        <button id="btn3" onclick="showDetails3()">X53 RGB 240mm Liquid Cooler</button>
+                        <button id="btn4" onclick="showDetails4()">X63 RGB 280mm Liquid Cooler</button>
+                        <button id="btn5" onclick="showDetails5()">X73 RGB 360mm Liquid Cooler</button>
+                        <button id="btn6" onclick="showDetails6()">Z53 240mm Liquid Cooler</button>
+                        <button id="btn7" onclick="showDetails7()">Z63 28mm Liquid Cooler</button>
+                        <div id="showDetails1">
+                            <label>Type</label> <br>
+                            <div onclick="change1()">
+                                X73 360mm Liquid Cooler
+                            </div>
+                            <div onclick="change2()" >
+                                X53 RGB 240mm Liquid Cooler
+                            </div>
+                            <div onclick="change3()" >
+                                X63 RGB 280mm Liquid Cooler
+                            </div>
+                            <div onclick="change4()" >
+                                X73 RGB 360mm Liquid Cooler
+                            </div>
+                            <div onclick="change5()" >
+                                Z53 240mm Liquid Cooler
+                            </div>
+                            <div onclick="change6()" >
+                                Z63 28mm Liquid Cooler
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="row">
+                        <button id="btn1" onclick="showDetails1()">Support</button>
+                        <button id="btn2" onclick="showDetails2()">X73 360mm Liquid Cooler</button>
+                        <button id="btn3" onclick="showDetails3()">X53 RGB 240mm Liquid Cooler</button>
+                        <button id="btn4" onclick="showDetails4()">X63 RGB 280mm Liquid Cooler</button>
+                        <button id="btn5" onclick="showDetails5()">X73 RGB 360mm Liquid Cooler</button>
+                        <button id="btn6" onclick="showDetails6()">Z53 240mm Liquid Cooler</button>
+                        <button id="btn7" onclick="showDetails7()">Z63 28mm Liquid Cooler</button>
+                        <div id="showDetails1">
+                            <label>Type</label> <br>
+                            <div onclick="change1()">
+                                X73 360mm Liquid Cooler
+                            </div>
+                            <div onclick="change2()" >
+                                X53 RGB 240mm Liquid Cooler
+                            </div>
+                            <div onclick="change3()" >
+                                X63 RGB 280mm Liquid Cooler
+                            </div>
+                            <div onclick="change4()" >
+                                X73 RGB 360mm Liquid Cooler
+                            </div>
+                            <div onclick="change5()" >
+                                Z53 240mm Liquid Cooler
+                            </div>
+                            <div onclick="change6()" >
+                                Z63 28mm Liquid Cooler
+                            </div>
+                        </div>
+                       
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+        </section>
+    </form>
+    <script>
+        var menuBtn = document.getElementById("menuBtn");
+        var sideNav = document.getElementById("sideNav");
+        var menu = document.getElementById("menu");
+
+        sideNav.style.right = "-250px"
+
+        menuBtn.onclick = function () {
+            if (sideNav.style.right == "-250px") {
+                sideNav.style.right = "0";
+
+                menu.src = "img/close.png";
+            }
+            else {
+                sideNav.style.right = "-250px";
+
+                menu.src = "img/menu.png"
+            }
+        }
+        
+
+        function getValues(){
+        	let xhr=new XMLHttpRequest();
+        	xhr.open("get","details/data");
+        	xhr.onload=function(){
+        		
+        		let value=JSON.parse(xhr.response);
+        		console.log(value);
+        		for(let i=0;i<value.length;i++){
+        			document.getElementById("showDetails1").innerHtml="<div onclick='change"+i+1+"()' id='coolerType'>"+value[i].typeOfComponent+"</div>";
+        		}
+        	}
+        	
+        	xhr.send();
+        	
+        	
+        	
+        }
+    </script>
+
+</body>
+
+</html>
