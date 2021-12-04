@@ -38,18 +38,23 @@ public class MyClass {
 		return "home";
 	}
 	
-	@PostMapping("/signin")
+	@PostMapping("/signinUser")
 	String RegisterPage(@ModelAttribute UserDetails userDetails) {
 		ud.save(userDetails);
 		return "redirect:/";
 	}
 	
-	@RequestMapping("/homepage")
+	@GetMapping("/homepage")
 	String home(HttpSession session) {
 //		if(session.getAttribute("id")==null) {
 //			return "redirect:/";
 //		}
 		return "check";
+	}
+	
+	@RequestMapping("/test")
+	String testModel() {
+		return "redirect:homepage";
 	}
 	
 	@PostMapping("/login")
@@ -60,7 +65,7 @@ public class MyClass {
 			session.setAttribute("user", b.get().getUsername());
 			session.setAttribute("id",session.getId());
 			session.setMaxInactiveInterval(12);
-			return "redirect:home";
+			return "redirect:homepage";
 		}
 		return "redirect:/";
 	}
