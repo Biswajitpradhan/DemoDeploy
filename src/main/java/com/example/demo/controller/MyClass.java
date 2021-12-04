@@ -46,9 +46,9 @@ public class MyClass {
 	
 	@RequestMapping("/homepage")
 	String home(HttpSession session) {
-		if(session.getAttribute("id")==null) {
-			return "redirect:/";
-		}
+//		if(session.getAttribute("id")==null) {
+//			return "redirect:/";
+//		}
 		return "home";
 	}
 	
