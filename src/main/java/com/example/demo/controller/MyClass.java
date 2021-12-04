@@ -2,7 +2,7 @@ package com.example.demo.controller;
 
 import java.util.Optional;
 
-
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,10 +46,10 @@ public class MyClass {
 	
 	@GetMapping("/homepage")
 	String home(HttpSession session) {
-//		if(session.getAttribute("id")==null) {
-//			return "redirect:/";
-//		}
-		return "check";
+		if(session.getAttribute("id")==null) {
+			return "redirect:/";
+		}
+		return "home";
 	}
 	
 	@RequestMapping("/test")
@@ -62,9 +62,12 @@ public class MyClass {
 	{
 		Optional<UserDetails> b=implService.checkUser(mail, pass);
 		if(b.isPresent()) {
+			
 			session.setAttribute("user", b.get().getUsername());
 			session.setAttribute("id",session.getId());
-			session.setMaxInactiveInterval(12);
+			session.setMaxInactiveInterval(12000);
+			
+			System.out.println(session.getAttribute("id"));
 			return "redirect:homepage";
 		}
 		return "redirect:/";
